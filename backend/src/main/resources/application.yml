@@ -1,3 +1,3 @@
-placesAPI:
-  name: Helsinki Open API, Places
-  baseUrl: open-api.myhelsinki.fi/v2/place
+helsinkiAPI:
+  name: Helsinki Open API
+  baseUrl: open-api.myhelsinki.fi/v2
