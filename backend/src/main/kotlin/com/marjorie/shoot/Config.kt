@@ -6,9 +6,12 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.web.reactive.function.client.WebClient
 
 @Configuration
-class Config(@Value("\${helsinkiAPI.baseUrl}") val helsinkiAPI: String) {
+class Config(
+        @Value("\${helsinkiAPI.baseUrl}")
+        val helsinkiAPI: String,
+) {
     @Bean
-    fun createPlacesWebClient(): WebClient {
+    fun createHelsinkiClient(): WebClient {
         return WebClient.create(helsinkiAPI)
     }
 }

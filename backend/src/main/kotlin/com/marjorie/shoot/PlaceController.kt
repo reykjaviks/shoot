@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Mono
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/places")
 class PlaceController(private val placeService: PlaceService) {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
