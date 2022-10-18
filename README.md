@@ -1,1 +1,2 @@
 # shoot
+Example of using Spring Reactive to build a RESTful web service. The application uses [Helsinki Open API](https://open-api.myhelsinki.fi/) to fetch information regarding different places located in Helsinki.
