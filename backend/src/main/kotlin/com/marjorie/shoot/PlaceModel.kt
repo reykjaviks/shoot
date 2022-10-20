@@ -10,11 +10,11 @@ data class Places(
 data class Place(
         val id: Long,
         @JsonProperty("info_url")
-        val infoUrl: String,
-        val name: Name,
-)
-
-data class Name(
-        val fi: String,
-        val en: String,
-)
+        val infoUrl: String?,
+        var nameFi: String?,
+) {
+        @JsonProperty("name")
+        fun unpackNameFromNestedJSON(name: Map<String, Any>) {
+                this.nameFi = name["fi"].toString()
+        }
+}

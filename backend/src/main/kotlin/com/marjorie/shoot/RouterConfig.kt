@@ -14,7 +14,10 @@ import org.springframework.web.reactive.function.server.ServerResponse
 class RouterConfig {
     @Bean
     fun routes(placeHandler: PlaceHandler): RouterFunction<ServerResponse> {
-        return route(GET("/places/{id}"), placeHandler::getPlaceById)
-                //.andRoute(GET("/posts"), placeHandler::getAllPlaces)
+        return route(
+            GET("/places/{id}"), placeHandler::getPlaceById
+        ).andRoute(
+            GET("/places"), placeHandler::getAllPlaces
+        )
     }
 }

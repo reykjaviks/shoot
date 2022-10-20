@@ -22,4 +22,12 @@ class PlaceClient(
                 .retrieve()
                 .bodyToMono(Place::class.java)
     }
+
+    fun getAll(): Mono<Places> {
+        return this.helsinkiAPIWebClient.get()
+            .uri("/places/")
+            .accept(MediaType.APPLICATION_JSON)
+            .retrieve()
+            .bodyToMono(Places::class.java)
+    }
 }

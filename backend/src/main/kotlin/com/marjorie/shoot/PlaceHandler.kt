@@ -18,8 +18,7 @@ class PlaceHandler(
                 .switchIfEmpty(ServerResponse.notFound().build())
     }
 
-    // TODO
-    fun getAllPlaces(request: ServerRequest): Mono<ServerResponse>? {
-        return null
+    fun getAllPlaces(request: ServerRequest): Mono<ServerResponse> {
+        return ServerResponse.ok().body(this.placeClient.getAll(), Places::class.java)
     }
 }
