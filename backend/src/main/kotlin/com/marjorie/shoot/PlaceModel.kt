@@ -11,6 +11,7 @@ data class Place(
         val id: Long,
         @JsonProperty("info_url")
         val infoUrl: String?,
+        @JsonProperty("name_fi")
         var nameFi: String?,
 ) {
         @JsonProperty("name")
