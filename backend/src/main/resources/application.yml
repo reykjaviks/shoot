@@ -1,3 +1,6 @@
 helsinkiAPI:
   name: Helsinki Open API
   baseUrl: open-api.myhelsinki.fi/v2
+frontend:
+  name: Shoot App Frontend
+  origin: http://localhost:5173

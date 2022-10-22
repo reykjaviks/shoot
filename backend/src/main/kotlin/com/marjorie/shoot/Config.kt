@@ -7,12 +7,13 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.http.codec.ClientCodecConfigurer
 import org.springframework.web.reactive.function.client.ExchangeStrategies
 import org.springframework.web.reactive.function.client.WebClient
+import java.util.*
 
 
 @Configuration
 class Config(
         @Value("\${helsinkiAPI.baseUrl}")
-        val helsinkiAPI: String
+        val helsinkiAPI: String,
 ) {
     @Bean
     @Qualifier("helsinkiAPIWebClient")
