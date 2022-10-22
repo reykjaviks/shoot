@@ -1,5 +1,7 @@
-package com.marjorie.shoot
+package com.marjorie.shoot.place
 
+import com.marjorie.shoot.Place
+import com.marjorie.shoot.Places
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.http.MediaType
 import org.springframework.stereotype.Component
