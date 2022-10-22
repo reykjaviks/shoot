@@ -1,4 +1,4 @@
-package com.marjorie.shoot
+package com.marjorie.shoot.config
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Configuration

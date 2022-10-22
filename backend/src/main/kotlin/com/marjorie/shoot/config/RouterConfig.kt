@@ -1,5 +1,6 @@
-package com.marjorie.shoot
+package com.marjorie.shoot.config
 
+import com.marjorie.shoot.PlaceHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.reactive.function.server.RequestPredicates.GET

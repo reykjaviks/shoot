@@ -1,4 +1,4 @@
-package com.marjorie.shoot
+package com.marjorie.shoot.config
 
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value
@@ -11,7 +11,7 @@ import java.util.*
 
 
 @Configuration
-class Config(
+class WebClientConfig(
         @Value("\${helsinkiAPI.baseUrl}")
         val helsinkiAPI: String,
 ) {
