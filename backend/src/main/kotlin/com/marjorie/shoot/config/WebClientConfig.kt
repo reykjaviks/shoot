@@ -1,6 +1,5 @@
 package com.marjorie.shoot.config
 
-import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -15,7 +14,6 @@ class WebClientConfig(
         val helsinkiAPI: String,
 ) {
     @Bean
-    @Qualifier("helsinkiAPIWebClient")
     fun helsinkiAPIWebClient(webClientBuilder: WebClient.Builder): WebClient {
         val size = 16 * 1024 * 1024
         val strategies = ExchangeStrategies.builder()
