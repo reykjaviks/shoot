@@ -9,7 +9,6 @@ import org.springframework.web.reactive.function.client.ExchangeStrategies
 import org.springframework.web.reactive.function.client.WebClient
 import java.util.*
 
-
 @Configuration
 class WebClientConfig(
         @Value("\${helsinkiAPI.baseUrl}")
