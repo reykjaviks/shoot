@@ -14,11 +14,11 @@ import reactor.core.publisher.Mono
 @Component
 class PlaceClient(
         @Qualifier("helsinkiAPIWebClient")
-        private val helsinkiAPIWebClient: WebClient
+        private val helsinkiClient: WebClient
 ) {
 
     fun getById(id: String): Mono<Place> {
-        return helsinkiAPIWebClient.get()
+        return helsinkiClient.get()
                 .uri("/place/".plus(id))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
@@ -26,7 +26,7 @@ class PlaceClient(
     }
 
     fun getAll(): Mono<Places> {
-        return this.helsinkiAPIWebClient.get()
+        return this.helsinkiClient.get()
             .uri("/places/")
             .accept(MediaType.APPLICATION_JSON)
             .retrieve()
