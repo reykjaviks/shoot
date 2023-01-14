@@ -1,10 +1,12 @@
 # Build
+
 FROM openjdk:17-alpine as builder
 ADD . /builder
 WORKDIR /builder
 RUN ./gradlew build
 
 # Run
+
 FROM openjdk:17-alpine
 WORKDIR /app
 EXPOSE 8080
